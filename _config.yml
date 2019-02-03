@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://brakemanscanner.org
-title: Brakeman - Rails Security Scanner
+url: https://railroader.org
+title: Railroader - Rails Security Scanner
 subtitle: Static analysis security scanner for Ruby on Rails
-author: Justin Collins
+author: David A. Wheeler (with previous work by Justin Collins)
 simple_search: https://google.com/search
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
@@ -49,16 +49,16 @@ default_asides: [custom/asides/about.html, custom/asides/github.html, asides/rec
 # ----------------------- #
 
 # Twitter
-twitter_user: brakeman
-twitter_tweet_count: 2
-twitter_show_replies: false
-twitter_follow_button: true
-twitter_show_follower_count: false
-twitter_tweet_button: true
+# twitter_user: railroader
+# twitter_tweet_count: 2
+# twitter_show_replies: false
+# twitter_follow_button: true
+# twitter_show_follower_count: false
+# twitter_tweet_button: true
 
 # Google Plus
-google_plus_one: true
-google_plus_one_size: medium
+# google_plus_one: true
+# google_plus_one_size: medium
 
 # Pinboard
 pinboard_user:
@@ -69,7 +69,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: brakeman
+disqus_short_name: railroader
 
 # Google Analytics
-google_analytics_tracking_id: UA-12578396-3
+# google_analytics_tracking_id: UA-12578396-3

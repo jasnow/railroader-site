@@ -1,6 +1,13 @@
-# Brakeman Site
+# Railroader Site
 
-This is the code for building https://brakemanscanner.org
+This is the code for building <https://railroader.org>,
+the Railroader website.
+
+This is a project fork of the code for building the Brakeman website at:
+<https://github.com/presidentbeef/brakeman-site>
+It is legal, as the original website was licensed under the
+Creative Commons Attribution 3.0 Unported License
+(we are under the same license).
 
 ## Development
 
@@ -10,9 +17,12 @@ Changes to the site content should be made in `source/`. Markdown is preferred.
 
 To build:
 
-* Use Ruby 1.9.3
+* Use Ruby 1.9.3.  If you use rbenv: rbenv install 1.9.3-p551
+* To install a bundler that works on this old Ruby: gem install --version 1.17.3 bundler
 * `bundle install` for dependencies
-* To preview: `rake preview` and visit http://localhost:4000
+* To preview: `bundle exec rake preview` and visit http://localhost:4000
+
+
 
 ## License
 
