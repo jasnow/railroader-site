@@ -42,13 +42,14 @@ relevant files from the main railroader site (master branch)
 into `source/railroader/docs/warning_types`
 
 ~~~~
-    rake copy_docs_from_railroader
+    bundle exec rake copy_docs_from_railroader
 ~~~~
 
 To preview: `bundle exec rake preview` and visit http://localhost:4000
 
 To deploy, generate the pages (to /public),
-then run `rake deploy` - this will copy the files in /public and the dotfiles
+then run `bundle exec rake deploy` -
+this will copy the files in /public and the dotfiles
 to \_deploy, then push to the GitHub Pages (gh-pages) branch.
 
 ## License
