@@ -1,0 +1,24 @@
+baseurl = "https://railroader.org/"
+languageCode = "en-us"
+title = "Railroader"
+theme = "gohugo-theme-ananke"
+paginate = "10"
+enableRobotsTXT = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "About"
+    name = "About"
+    url = "/about/"
+
+  [[menu.main]]
+    identifier = "Install"
+    name = "Install"
+    url = "/install/"
+
+  [[menu.main]]
+    identifier = "Use"
+    name = "Use"
+    url = "/use/"
+

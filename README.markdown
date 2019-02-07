@@ -11,7 +11,12 @@ Creative Commons Attribution 3.0 Unported License
 
 ## Install instructions to make changes
 
-The site is built using (a very old version of) Octopress, which is a layer on top of Jekyll.  We are seriously considering switching to Hugo, but the goal was to just get started.  First you need to install things so that you can make changes.
+This version of the site is generated using hugo. On Ubuntu use
+~~~~
+snap install hugo
+~~~~
+
+The older site is built using (a very old version of) Octopress, which is a layer on top of Jekyll.  We are seriously considering switching to Hugo, but the goal was to just get started.  First you need to install things so that you can make changes.
 
 Changes to the site content should be made in `source/`. Markdown is preferred.
 
