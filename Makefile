@@ -3,7 +3,8 @@ demo:
 
 generate:
 	HUGO_ENV=production hugo
-	cp -pr public/ _deploy/
+	rm -fr _deploy/[a-z0-9]*
+	cp -pr public/* _deploy/
 
 push:
-	cd _deploy; git push
+	cd _deploy; git add *; git commit -asv && git push
