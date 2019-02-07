@@ -7,27 +7,27 @@ sharing: true
 footer: true
 ---
 
-For regular technical support for Brakeman, please [file an issue on GitHub](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue).
+For regular technical support for Railroader, please [file an issue on GitHub](https://github.com/presidentbeef/railroader/wiki/How-to-Report-a-Railroader-Issue).
 
-For paid support, please consider buying a [Brakeman Pro license](https://brakemanpro.com/index.html) or contact support@brakemanpro.com to discuss other options.
+For paid support, please consider buying a [Railroader Pro license](https://railroaderpro.com/index.html) or contact support@railroaderpro.com to discuss other options.
 
 ### Sponsorship/Donations
 
 If you would like to make a donation, please see [our Pledgie page](https://pledgie.com/campaigns/30943).
 
-To sponsor a particular feature or bug fix, please contact [Justin Collins](https://github.com/presidentbeef). Any sponsored work will be incorporated into the open source code of Brakeman under the MIT license.
+To sponsor a particular feature or bug fix, please contact [Justin Collins](https://github.com/presidentbeef). Any sponsored work will be incorporated into the open source code of Railroader under the MIT license.
 
-### Brakeman Pro
+### Railroader Pro
 
-Brakeman began as a free and open source project and it will always be available under an open source license.
+Railroader began as a free and open source project and it will always be available under an open source license.
 
-The commercial [Brakeman Pro](https://brakemanpro.com/) version provides a graphical interface, advanced management of warnings and reports, paid support, and commercial licensing. Purchasing a Brakeman Pro license also supports the continued development of the open source version.
+The commercial [Railroader Pro](https://railroaderpro.com/) version provides a graphical interface, advanced management of warnings and reports, paid support, and commercial licensing. Purchasing a Railroader Pro license also supports the continued development of the open source version.
 
-[![Brakeman Pro](/images/bmp.png)](https://brakemanpro.com)
+[![Railroader Pro](/images/bmp.png)](https://railroaderpro.com)
 
 #### Feature Comparison <a id="feature-comparison"></a>
 
- Feature                                 | Brakeman     | Brakeman Pro |
+ Feature                                 | Railroader     | Railroader Pro |
  -----------                             | ------------ |--------------|
  Fast source code security scans         | ✓ | ✓
  Zero configuration required             | ✓ | ✓
@@ -53,4 +53,4 @@ The commercial [Brakeman Pro](https://brakemanpro.com/) version provides a graph
 
 ---
 
-[Visit the Brakeman Pro site](https://brakemanpro.com/) for more details.
+[Visit the Railroader Pro site](https://railroaderpro.com/) for more details.

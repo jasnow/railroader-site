@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Brakeman 1.5.1 Released"
+title: "Railroader 1.5.1 Released"
 date: 2012-03-05 18:50
 comments: true
 categories: 
 ---
 
-After the excitment yesterday with a mass assignment vulnerability being exploited in a very public manner on [Github](https://gist.github.com/1978249), interest in Brakeman has skyrocketed.
+After the excitment yesterday with a mass assignment vulnerability being exploited in a very public manner on [Github](https://gist.github.com/1978249), interest in Railroader has skyrocketed.
 
-This lead to re-examination of Brakeman's code for detecting that mass assignment has been globally disabled - and it turns out there was a bug or two. So here is a bug-fix release of Brakeman to correct that and some other minor issues.
+This lead to re-examination of Railroader's code for detecting that mass assignment has been globally disabled - and it turns out there was a bug or two. So here is a bug-fix release of Railroader to correct that and some other minor issues.
 
 Upgrading to 1.5.1 may increase the number of warnings reported.
 
@@ -19,15 +19,15 @@ _Changes since 1.5.0_:
  * Show backtrace when interrupt received (Ruby 1.9 only)
  * More debug output
  * Internal fixes:
-   * Remove duplicate method in Brakeman::Rails2XSSErubis
-   * Add tracking of module and class to Brakeman::BaseProcessor
-   * Report module when using Brakeman::FindCall
+   * Remove duplicate method in Railroader::Rails2XSSErubis
+   * Add tracking of module and class to Railroader::BaseProcessor
+   * Report module when using Railroader::FindCall
 
 ### Mass Assignment
 
 Mass assignment is not a particularly new issue, but the amount of attention suddenly focused on it this weekend was amazing.
 
-This release of Brakeman can detect three different methods for defaulting all models to a whitelist of allowed attributes that can be mass assigned.
+This release of Railroader can detect three different methods for defaulting all models to a whitelist of allowed attributes that can be mass assigned.
 
 The first is probably the most widely-seen version. In an intializer, do
 
@@ -45,15 +45,15 @@ The third option is only available for Rails 3.1.0 and newer. The following conf
 
     config.active_record.whitelist_attributes = true
 
-Brakeman should correctly detect all of these.
+Railroader should correctly detect all of these.
 
-[This is a very nice post](http://pragtob.wordpress.com/2012/03/06/secure-your-rails-apps/) explaining the dangers of mass assignment (mentioning Brakeman is nice, too.)
+[This is a very nice post](http://pragtob.wordpress.com/2012/03/06/secure-your-rails-apps/) explaining the dangers of mass assignment (mentioning Railroader is nice, too.)
 
 ### Partials in Rails 3
 
 In Rails 3, `render 'blah'` is now equivalent to `render :partial => 'blah'` when used inside a template.
 
-Brakeman now supports this correctly.
+Railroader now supports this correctly.
 
 ### Debug Output
 
@@ -67,4 +67,4 @@ There have been a few internal changes. There is a possibility that these will a
 
 ### Report Issues
 
-Please report any problems on [Github](https://github.com/presidentbeef/brakeman/issues)!
+Please report any problems on [Github](https://github.com/presidentbeef/railroader/issues)!

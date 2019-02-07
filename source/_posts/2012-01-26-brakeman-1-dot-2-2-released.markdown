@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 1.2.2 Released"
+title: "Railroader 1.2.2 Released"
 date: 2012-01-26 13:58
 comments: true
 categories: 
@@ -24,4 +24,4 @@ For no great reason, `CheckLinkTo` was bundled with `CheckCrossSiteScripting`. I
 
 ### Better Rails 2 Route Handling
 
-Brakeman was raising an exception if a hash option to `resource` or `resources` did not match a set of known options. Now it will only warn instead of aborting route processing.
+Railroader was raising an exception if a hash option to `resource` or `resources` did not match a set of known options. Now it will only warn instead of aborting route processing.

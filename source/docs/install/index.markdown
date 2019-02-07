@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Installing Brakeman"
+title: "Installing Railroader"
 date: 2011-08-26 23:18
 comments: false
 sharing: false
@@ -9,30 +9,30 @@ footer: true
 
 ### gem install
 
-Brakeman is best installed via [RubyGems](http://rubygems.org/):
+Railroader is best installed via [RubyGems](http://rubygems.org/):
 
-    gem install brakeman
+    gem install railroader
 
-This will provide the `brakeman` executable.
+This will provide the `railroader` executable.
 
 ### bundler
 
-Brakeman can be added to a Gemfile:
+Railroader can be added to a Gemfile:
 
-    gem "brakeman"
+    gem "railroader"
 
-It is recommended to _always_ use the latest version of Brakeman.
+It is recommended to _always_ use the latest version of Railroader.
 
 ### git clone
 
 If you must have the latest and greatest, then you can build the gem yourself:
 
-    git clone git://github.com/presidentbeef/brakeman.git
-    cd brakeman
-    gem build brakeman.gemspec
-    gem install brakeman-*.gem
+    git clone git://github.com/presidentbeef/railroader.git
+    cd railroader
+    gem build railroader.gemspec
+    gem install railroader-*.gem
 
 ---
-[Running Brakeman](/docs/running)
+[Running Railroader](/docs/running)
 
 [More documentation](/docs)

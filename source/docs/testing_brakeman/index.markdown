@@ -1,19 +1,19 @@
 ---
 layout: page
-title: "Testing Brakeman"
+title: "Testing Railroader"
 date: 2012-02-09 10:02
 comments: false
 sharing: false
 footer: true
 ---
 
-Tests for Brakeman are written using the standard library's [test/unit](http://rubydoc.info/stdlib/test/1.8.7/Test/Unit).
+Tests for Railroader are written using the standard library's [test/unit](http://rubydoc.info/stdlib/test/1.8.7/Test/Unit).
 
 The main test file is in `test/test.rb`. It can be run using `ruby test/test.rb` (or from any directory).
 
 ### Structure
 
-Brakeman is tested by running it against full Rails applications and then checking the reported warnings.
+Railroader is tested by running it against full Rails applications and then checking the reported warnings.
 
     test/test.rb #Main test runner
     test/apps/   #Apps to check against
@@ -36,11 +36,11 @@ There are corresponding sets of tests for each application:
 Each of the test files starts off like this:
 
     class Rails3Tests < Test::Unit::TestCase
-      include BrakemanTester::FindWarning
-      include BrakemanTester::CheckExpected
+      include RailroaderTester::FindWarning
+      include RailroaderTester::CheckExpected
     
       def report
-        @@report ||= BrakemanTester.run_scan "rails3", "Rails 3"
+        @@report ||= RailroaderTester.run_scan "rails3", "Rails 3"
       end
 
       def expected
@@ -52,9 +52,9 @@ Each of the test files starts off like this:
         }
       end
 
-The `report` method runs the scan once. The first argument is the directory of the application, assumed to be under `test/apps/`. The second argument is just a name for the application. After that, any options that would normally be given to `Brakeman.run` can be provided.
+The `report` method runs the scan once. The first argument is the directory of the application, assumed to be under `test/apps/`. The second argument is just a name for the application. After that, any options that would normally be given to `Railroader.run` can be provided.
 
-The result of `BrakemanTester.run_scan` is a big hash of the warnings found during the scan. This is generated using `Brakeman::Report#to_test`.
+The result of `RailroaderTester.run_scan` is a big hash of the warnings found during the scan. This is generated using `Railroader::Report#to_test`.
 
 Two modules are included in the test suite. `FindWarning` provides a search capability for finding warnings in the report. `CheckExpected` calls `expected` and checks the numbers there against the actual report.
 
@@ -73,7 +73,7 @@ To test for the presence of a warning, use the `assert_warning` method. This met
         :file => /home_controller\.rb/
     end
 
-Each key in the hash is a method on `Brakeman::Warning`, except `:type`. The value will be tested using `===` against the result of calling the method. This means regular expressions can be used to match against strings.
+Each key in the hash is a method on `Railroader::Warning`, except `:type`. The value will be tested using `===` against the result of calling the method. This means regular expressions can be used to match against strings.
 
 It is best to be as specific as possible, because `assert_warning` expects *exactly* one warning to match.
 

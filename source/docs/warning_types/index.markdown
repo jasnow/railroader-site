@@ -7,7 +7,7 @@ sharing: false
 footer: true
 ---
 
-Read more about the different warnings Brakeman reports:
+Read more about the different warnings Railroader reports:
 
 * [Attribute Restriction](/docs/warning_types/attribute_restriction)
 * [Authentication](/docs/warning_types/authentication)

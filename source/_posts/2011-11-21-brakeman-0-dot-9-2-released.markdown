@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 0.9.2 Released"
+title: "Railroader 0.9.2 Released"
 date: 2011-11-21 17:12
 comments: true
 categories: 
@@ -15,7 +15,7 @@ Just a small release to get the Rails 3 config fix out.
 
 ### Rails 3 Configuration Parsing
 
-There was an issue that would cause Brakeman to crash on certain configurations. This has been fixed.
+There was an issue that would cause Railroader to crash on certain configurations. This has been fixed.
 
 ### Look for t()
 

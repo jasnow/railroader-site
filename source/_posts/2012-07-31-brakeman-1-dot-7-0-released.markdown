@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 1.7.0 Released"
+title: "Railroader 1.7.0 Released"
 date: 2012-07-31 17:44
 comments: true
 categories: 
@@ -27,13 +27,13 @@ _Changes since 1.6.2_:
 
 [CVE-2012-3424](https://groups.google.com/d/topic/rubyonrails-security/vxJjrc15qYM/discussion), a potential denial of service vulnerability in how Rails handles HTTP authentication digest parameters, was recently announced. It affects Rails 3.x, and is fixed in 3.0.16, 3.1.7, and 3.2.7.
 
-Brakeman will generate a warning for the Rails versions affected, but will only report a high confidence warning if `authenticate_or_request_with_http_digest` or `authenticate_with_http_digest` methods are called.
+Railroader will generate a warning for the Rails versions affected, but will only report a high confidence warning if `authenticate_or_request_with_http_digest` or `authenticate_with_http_digest` methods are called.
 
 ### Links to Warning Information
 
-HTML reports now link warning types to descriptions on the Brakeman website. JSON reports will also include the link information. Due to this change, it is not possible to compare JSON reports from previous versions using the `--compare` option.
+HTML reports now link warning types to descriptions on the Railroader website. JSON reports will also include the link information. Due to this change, it is not possible to compare JSON reports from previous versions using the `--compare` option.
 
-Suggestions and [pull requests](https://github.com/presidentbeef/brakeman-site) for improving the documention are welcome!
+Suggestions and [pull requests](https://github.com/presidentbeef/railroader-site) for improving the documention are welcome!
 
 ### Report Check Errors
 
@@ -41,9 +41,9 @@ Previously, errors encounted while running checks were not included in reports. 
 
 ### Better Rails 3 Route Processing
 
-Even the simple information Brakeman uses (which methods are routes) is difficult to extract from Rails 3 routes due to all the different options it offers. This release should decrease the number of "Error while processing routes" messages that come up.
+Even the simple information Railroader uses (which methods are routes) is difficult to extract from Rails 3 routes due to all the different options it offers. This release should decrease the number of "Error while processing routes" messages that come up.
 
-See [this pull request](https://github.com/presidentbeef/brakeman/pull/116) for more information about specific fixes.
+See [this pull request](https://github.com/presidentbeef/railroader/pull/116) for more information about specific fixes.
 
 ### Improved File Access Check
 
@@ -57,7 +57,7 @@ Models which do not inherit from `ActiveRecord::Base` will no longer be reported
 
 ### Default Assignment to `params`
 
-Normally, when Brakeman processes an assignment like `x ||= y`, it will assign `y` to `x` if no previous value is found for `x`.
+Normally, when Railroader processes an assignment like `x ||= y`, it will assign `y` to `x` if no previous value is found for `x`.
 
 However, in this case:
 
@@ -87,6 +87,6 @@ Please report any errors raised when performing scans, as they are usually bugs.
 
 ### Report Issues
 
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release!
+Please report any [issues](https://github.com/presidentbeef/railroader/issues) with this release!
 
-Also consider joining the [mailing list](http://brakemanscanner.org/contact/) or following [@brakeman](https://twitter.com/brakeman) on Twitter. 
+Also consider joining the [mailing list](http://railroaderscanner.org/contact/) or following [@railroader](https://twitter.com/railroader) on Twitter. 

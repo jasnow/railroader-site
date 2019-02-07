@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Brakeman 0.8.0 Released"
+title: "Railroader 0.8.0 Released"
 date: 2011-09-15 10:06
 comments: true
 categories: release 
 ---
 
-Change list for Brakeman 0.8.0:
+Change list for Railroader 0.8.0:
 
  * Add check for mass assignment using without_protection
  * Add check for password in http_basic_authenticate_with
@@ -17,7 +17,7 @@ Change list for Brakeman 0.8.0:
  * Add ruby_parser hack for Ruby 1.9 hash syntax
  * Add a few Rails 3.1 tests
 
-As always, please [report any issues](https://github.com/presidentbeef/brakeman/issues).
+As always, please [report any issues](https://github.com/presidentbeef/railroader/issues).
 
 ## New Checks
 
@@ -55,14 +55,14 @@ Warnings reports will now include the detected Rails version as part of the info
 
 ## Support for Ruby 1.9 Hash Syntax
 
-[RubyParser](https://github.com/seattlerb/ruby_parser), used by Brakeman for all its Ruby parsing needs, [does not support the new Ruby 1.9 syntax](http://blog.zenspider.com/2010/12/bounty-ruby-parser-needs-19-lo.html). After coming across an application which uses the [1.9 hash syntax](http://blog.peepcode.com/tutorials/2011/rip-ruby-hash-rocket-syntax) _extremely_ liberally, a temporary hack has been added that should allow Brakeman to parse it correctly.
+[RubyParser](https://github.com/seattlerb/ruby_parser), used by Railroader for all its Ruby parsing needs, [does not support the new Ruby 1.9 syntax](http://blog.zenspider.com/2010/12/bounty-ruby-parser-needs-19-lo.html). After coming across an application which uses the [1.9 hash syntax](http://blog.peepcode.com/tutorials/2011/rip-ruby-hash-rocket-syntax) _extremely_ liberally, a temporary hack has been added that should allow Railroader to parse it correctly.
 
-This does mean that Brakeman is overriding RubyParser's code to add in this functionality. That is why it is a _temporary hack_.
+This does mean that Railroader is overriding RubyParser's code to add in this functionality. That is why it is a _temporary hack_.
 
 ## New Tests
 
-Work has begun on a test application using Rails 3.1. There do not seem to be any huge changes in 3.1 that would prevent Brakeman from working, though.
+Work has begun on a test application using Rails 3.1. There do not seem to be any huge changes in 3.1 that would prevent Railroader from working, though.
 
 ## Next Version
 
-The main area of focus for the next (major) release will be Rails 3.x routing. Brakeman is currently quite limited in what kinds of routes in understands.
+The main area of focus for the next (major) release will be Rails 3.x routing. Railroader is currently quite limited in what kinds of routes in understands.

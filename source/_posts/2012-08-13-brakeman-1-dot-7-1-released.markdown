@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 1.7.1 Released"
+title: "Railroader 1.7.1 Released"
 date: 2012-08-13 11:04
 comments: true
 categories: 
@@ -20,7 +20,7 @@ _Changes since 1.7.0_:
 
 In Rails 3.x, values supplied to the `:prompt` option in the `select_tag` helper are not escaped, leading to a cross-site scripting vulnerability.
 
-Brakeman will warn on all uses of `select_tag` with unescaped user input in the `:prompt` option.
+Railroader will warn on all uses of `select_tag` with unescaped user input in the `:prompt` option.
 
 ### CVE-2012-3464 - Single Quotes are Unescaped
 
@@ -30,22 +30,22 @@ Single quotes are most dangerous when interpolating values into HTML attributes 
 
 There is a [provided workaround](https://groups.google.com/d/topic/rubyonrails-security/kKGNeMrnmiY/discussion) for earlier versions of Rails which replaces `ERB::Util.html_escape` with `Rack::Utils.escape_html`. This method adds escaping for both single quotes (`'`) and forward slashes (`/`).
 
-If the provided workaround is used in an initializer, as suggested, then Brakeman will not generate a warning for this vulnerability. Otherwise, Brakeman will generate a warning for affected versions.
+If the provided workaround is used in an initializer, as suggested, then Railroader will not generate a warning for this vulnerability. Otherwise, Railroader will generate a warning for affected versions.
 
 ### CVE-2012-3465 - XSS in strip\_tags
 
 Another vulnerability has been reported for `strip_tags` (earlier report was [CVE-2011-2931](https://groups.google.com/d/topic/rubyonrails-security/K5EwdJt06hI/discussion)).
 
-Brakeman will warn on affected versions if uses of `strip_tags` are detected.
+Railroader will warn on affected versions if uses of `strip_tags` are detected.
 
 ### XSS in select Helper
 
 This vulnerability was [reported a while ago](https://groups.google.com/d/topic/rubyonrails-security/CdoMUVpsRmQ/discussion), but it was unclear if it applied to Rails 2.x or just Rails 3. Thanks to Neil Matatall, it has been confirmed to be an issue in Rails 2.x as well.
 
-Therefore, Brakeman will be reporting the vulnerability (`select` does not escape options list if supplied as a straight string) for Rails 2.x as well.
+Therefore, Railroader will be reporting the vulnerability (`select` does not escape options list if supplied as a straight string) for Rails 2.x as well.
 
 ### Report Issues
 
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release!
+Please report any [issues](https://github.com/presidentbeef/railroader/issues) with this release!
 
-Also consider joining the [mailing list](http://brakemanscanner.org/contact/) or following [@brakeman](https://twitter.com/brakeman) on Twitter.
+Also consider joining the [mailing list](http://railroaderscanner.org/contact/) or following [@railroader](https://twitter.com/railroader) on Twitter.

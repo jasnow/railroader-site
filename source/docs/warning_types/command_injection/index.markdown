@@ -17,7 +17,7 @@ There are many ways to run commands in Ruby:
 
     exec("md5sum #{params[:input]}")
 
-Brakeman will warn on any method like these that uses user input or unsafely interpolates variables.
+Railroader will warn on any method like these that uses user input or unsafely interpolates variables.
 
 See [the Ruby Security Guide](http://guides.rubyonrails.org/security.html#command-line-injection) for details.
 

@@ -8,7 +8,7 @@ footer: true
 ---
 
 <script>
-window.location.replace("http://brakemanscanner.org/docs/warning_types/session_setting/");
+window.location.replace("http://railroaderscanner.org/docs/warning_types/session_setting/");
 </script>
 
 Content has moved to [Session Setting](/docs/warning_types/session_setting/)

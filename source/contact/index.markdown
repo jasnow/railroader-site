@@ -9,12 +9,12 @@ footer: true
 
 ### GitHub Issues
 
-For any issues, bugs, or problems, please consider filing an [issue](https://github.com/presidentbeef/brakeman/issues) on GitHub.
+For any issues, bugs, or problems, please consider filing an [issue](https://github.com/presidentbeef/railroader/issues) on GitHub.
 
 ### Gitter
 
-For more real-time discussion, visit us on [Gitter](https://gitter.im/presidentbeef/brakeman).
+For more real-time discussion, visit us on [Gitter](https://gitter.im/presidentbeef/railroader).
 
 ### Twitter
 
-Follow Brakeman on Twitter [@Brakeman](http://twitter.com/brakeman) for news and announcements.
+Follow Railroader on Twitter [@Railroader](http://twitter.com/railroader) for news and announcements.

@@ -8,7 +8,7 @@ footer: true
 ---
 
 <script>
-window.location.replace("http://brakemanscanner.org/docs/warning_types/cross_site_scripting_to_json/");
+window.location.replace("http://railroaderscanner.org/docs/warning_types/cross_site_scripting_to_json/");
 </script>
 
 Content has moved to [Cross-Site Scripting](/docs/warning_types/cross_site_scripting_to_json/)

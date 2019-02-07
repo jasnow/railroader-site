@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 0.9.0 Released"
+title: "Railroader 0.9.0 Released"
 date: 2011-11-16 16:23
 comments: true
 categories: 
@@ -21,7 +21,7 @@ Configurations in `config/application` and `config/environments/production.rb` w
 
 ### Check for Disabled Mass Assignment
 
-A new option was added in Rails 3.1 to globally disable mass assignment using `config.active_record.whitelist_attributes = true`. Brakeman will now turn off mass assignment warnings if this configuration setting is detected.
+A new option was added in Rails 3.1 to globally disable mass assignment using `config.active_record.whitelist_attributes = true`. Railroader will now turn off mass assignment warnings if this configuration setting is detected.
 
 ### Always Warn on without_protection
 
@@ -31,10 +31,10 @@ For example:
 
     User.new(params, :without_protection => true)
 
-Brakeman will now _always_ warn when `without_protection` is used, even if mass assignment is disabled or attributes are protected on that model.
+Railroader will now _always_ warn when `without_protection` is used, even if mass assignment is disabled or attributes are protected on that model.
 
 ### Fix CSV Output
 
-Brakeman reports using the CSV format should work once again.
+Railroader reports using the CSV format should work once again.
 
 There is a bug in Ruport when using Ruby 1.9.2 and CSV output. A temporary patch has been added until this is resolved.

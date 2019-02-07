@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 1.6.2 Released"
+title: "Railroader 1.6.2 Released"
 date: 2012-06-12 17:07
 comments: true
 categories: 
@@ -42,15 +42,15 @@ The other change is that redirects to model attributes will now be marked as hig
 
 ### Exit Code on Missing Dependencies
 
-Brakeman catches errors from missing dependencies in order to show a nicer error message. Unfortunately, it was also returning `0` on exit. This is undesirable behavior when chaining commands together.
+Railroader catches errors from missing dependencies in order to show a nicer error message. Unfortunately, it was also returning `0` on exit. This is undesirable behavior when chaining commands together.
 
 This has been changed to return a non-zero exit code.
 
 ### Before Filter Changes
 
-There were some isues with how `before_filter` was being handled. The logic when using `:except` was broken, causing Brakeman to treat it like `:only`.
+There were some isues with how `before_filter` was being handled. The logic when using `:except` was broken, causing Railroader to treat it like `:only`.
 
-The other issue caused Brakeman to interpret arguments such as method calls as method names. For example, `before_filter blah` would be treated like `before_filter :blah`.
+The other issue caused Railroader to interpret arguments such as method calls as method names. For example, `before_filter blah` would be treated like `before_filter :blah`.
 
 While dealing with this, caching of filter lookups was also added for a minor performance improvement.
 
@@ -60,6 +60,6 @@ Using the `--compare` option now shows the same output as a regular scan. If you
 
 ### Report Issues
 
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release!
+Please report any [issues](https://github.com/presidentbeef/railroader/issues) with this release!
 
-Also consider joining the [mailing list](http://brakemanscanner.org/contact/) or following [@brakeman](https://twitter.com/brakeman) on Twitter. 
+Also consider joining the [mailing list](http://railroaderscanner.org/contact/) or following [@railroader](https://twitter.com/railroader) on Twitter. 

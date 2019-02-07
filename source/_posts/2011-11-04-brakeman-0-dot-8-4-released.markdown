@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 0.8.4 Released"
+title: "Railroader 0.8.4 Released"
 date: 2011-11-04 14:58
 comments: true
 categories: 
@@ -36,12 +36,12 @@ When default routes were detected for specific controllers, there will now be a 
 
 ### hash_insert() Fixed
 
-`hash_insert` was broken and would cause some spurious warnings. For example, sometimes `only_path => true` would be set in `params`, but Brakeman would mess up the `params` hash and a redirect warning would still be created.
+`hash_insert` was broken and would cause some spurious warnings. For example, sometimes `only_path => true` would be set in `params`, but Railroader would mess up the `params` hash and a redirect warning would still be created.
 
 ### Threaded Checks No Longer Use Queue
 
 When using threaded checks, the resulting warnings were stored in a thread-safe Queue. This has been removed, and the resulting value from each thread will be used instead. This should avoid some (small) locking overhead and is just simpler.
 
-### "Like" Brakeman on Ruby Toolbox
+### "Like" Railroader on Ruby Toolbox
 
-Please consider 'liking' Brakeman on the [Ruby Toolbox](https://www.ruby-toolbox.com/projects/brakeman)!
+Please consider 'liking' Railroader on the [Ruby Toolbox](https://www.ruby-toolbox.com/projects/railroader)!

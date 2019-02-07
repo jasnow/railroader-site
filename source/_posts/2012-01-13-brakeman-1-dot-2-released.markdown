@@ -1,18 +1,18 @@
 ---
 layout: post
-title: "Brakeman 1.2 Released"
+title: "Railroader 1.2 Released"
 date: 2012-01-13 22:00
 comments: true
 categories: 
 ---
 
-First Brakeman release of 2012!
+First Railroader release of 2012!
 
 _Changes since 1.1:_
 
  * Speed improvements for CheckExecute and CheckRender
  * Check `named_scope` and `scope` for SQL injection
- * Add `--rake` option to create rake task to run Brakeman
+ * Add `--rake` option to create rake task to run Railroader
  * Add `--summary` option to only output summary
  * Add experimental support for rescanning a subset of files
  * Fix a problem with Rails 3 routes
@@ -25,27 +25,27 @@ The checks for command injection and dynamic render paths should be considerably
 
 ### More SQL Injection Checks
 
-Thanks to [a5sk4s](https://github.com/presidentbeef/brakeman/issues/30) for pointing out that Brakeman was not checking `named_scope` for SQL injection. This has been rectified. For Rails 3.1 and up, `scope` will be checked.
+Thanks to [a5sk4s](https://github.com/presidentbeef/railroader/issues/30) for pointing out that Railroader was not checking `named_scope` for SQL injection. This has been rectified. For Rails 3.1 and up, `scope` will be checked.
 
 Also, it seems common to use `Model.table_name` inside SQL statements. This will no longer raise a warning.
 
-### Brakeman Rake Task
+### Railroader Rake Task
 
-The `--rake` option can now be used to install a Rake task for running Brakeman. The task will be copied to `lib/tasks/brakeman.rake`.
+The `--rake` option can now be used to install a Rake task for running Railroader. The task will be copied to `lib/tasks/railroader.rake`.
 
 To use, run this from the root of the Rails app:
 
-    brakeman --rake
+    railroader --rake
 
-Then, to run Brakeman:
+Then, to run Railroader:
 
-    rake brakeman:run
+    rake railroader:run
 
 Naturally, this requires Rake to be installed.
 
 To output to a specific file:
 
-    rake brakeman:run["report.html"]
+    rake railroader:run["report.html"]
 
 More actions may be added in the future.
 
@@ -59,4 +59,4 @@ This release adds experimental support for rescanning a subset of paths in a Rai
 
 ### Issues
 
-Please report _any_ problems or questions on [GitHub](https://github.com/presidentbeef/brakeman/issues) or send a tweet to [@Brakeman](https://twitter.com/#!/brakemanscanner)!
+Please report _any_ problems or questions on [GitHub](https://github.com/presidentbeef/railroader/issues) or send a tweet to [@Railroader](https://twitter.com/#!/railroaderscanner)!

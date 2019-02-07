@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 1.3.0 Released"
+title: "Railroader 1.3.0 Released"
 date: 2012-02-08 15:11
 comments: true
 categories: 
@@ -37,9 +37,9 @@ A list of files to skip can be provided with the `--skip-files` option. This wil
 
 ### Support for Blacklisting Attributes
 
-Previously, Brakeman ignored uses of `attr_protected`. Ideally, `attr_accessible` should always be used to whitelist attributes that can be set using mass assignment. This way, attributes can never be "accidentally" exposed. However, it can also be tedious for large models.
+Previously, Railroader ignored uses of `attr_protected`. Ideally, `attr_accessible` should always be used to whitelist attributes that can be set using mass assignment. This way, attributes can never be "accidentally" exposed. However, it can also be tedious for large models.
 
-With this release, Brakeman will downgrade mass assignment warnings to "weak" confidence if `attr_protected` is used, as well as suggesting that `attr_accessible` be used instead.
+With this release, Railroader will downgrade mass assignment warnings to "weak" confidence if `attr_protected` is used, as well as suggesting that `attr_accessible` be used instead.
 
 The `--ignore-protected` option can be used to suppress any warnings for models that use `attr_protected`.
 
@@ -81,8 +81,8 @@ There may be subtle issues with this code (although I have not seen any yet), bu
 
 ### Table Output for Rescan Reports
 
-`RescanReport#to_s(true)` will now output formatted tables, thanks to [Dave Worth](https://github.com/presidentbeef/brakeman/pull/33).
+`RescanReport#to_s(true)` will now output formatted tables, thanks to [Dave Worth](https://github.com/presidentbeef/railroader/pull/33).
 
 ### Issues?
 
-As usual, please report any issues on [GitHub](https://github.com/presidentbeef/brakeman/issues), send a tweet to [@Brakeman](https://twitter.com/brakeman), or send an email to the [mailing list](http://librelist.com/browser/brakeman/).
+As usual, please report any issues on [GitHub](https://github.com/presidentbeef/railroader/issues), send a tweet to [@Railroader](https://twitter.com/railroader), or send an email to the [mailing list](http://librelist.com/browser/railroader/).

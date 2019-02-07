@@ -7,7 +7,7 @@ sharing: false
 footer: true
 ---
 
-Brakemanのオプションドキュメント（[OPTIONS.md](https://github.com/presidentbeef/brakeman/blob/master/OPTIONS.md)）を翻訳しました。
+Railroaderのオプションドキュメント（[OPTIONS.md](https://github.com/presidentbeef/railroader/blob/master/OPTIONS.md)）を翻訳しました。
 
 共同翻訳者は@jnchitoです。
 
@@ -16,94 +16,94 @@ Brakemanのオプションドキュメント（[OPTIONS.md](https://github.com/p
 チェック項目のいくつかはデフォルトでは実行されません。すべてのチェックを実行したい場合は次のオプションを使います。
 
 ```
-brakeman -A
+railroader -A
 ```
 
 各チェックはデフォルトで別々のスレッドで実行されます。この振る舞いを無効にしたい場合は次のオプションを使います。
 
 ```
-brakeman -n
+railroader -n
 ```
 
-Brakemanはデフォルトでカレントディレクトリをスキャンします。次のようにして、特定のパスをそのまま引数として渡すこともできます。
+Railroaderはデフォルトでカレントディレクトリをスキャンします。次のようにして、特定のパスをそのまま引数として渡すこともできます。
 
 ```
-brakeman some/path/to/app
+railroader some/path/to/app
 ```
 
 しかし、もっと明示的にしたい場合は、`-p`または`--path`オプションが使えます。
 
 ```
-brakeman -p path/to/app
+railroader -p path/to/app
 ```
 
 警告の出力を抑制し、レポートだけを出力したい場合は次のオプションを使います。
 
 ```
-brakeman -q
+railroader -q
 ```
 
-レポート以外のBrakemanの出力はすべて標準エラー出力に出力されます。ですので、標準出力をファイルにリダイレクトするだけで、レポートを作成することができます。
+レポート以外のRailroaderの出力はすべて標準エラー出力に出力されます。ですので、標準出力をファイルにリダイレクトするだけで、レポートを作成することができます。
 
-Brakemanは大きな問題がない限り、セキュリティの脆弱性かスキャンのエラーが見つかったら、0でないエラーを返します。
+Railroaderは大きな問題がない限り、セキュリティの脆弱性かスキャンのエラーが見つかったら、0でないエラーを返します。
 その動作を無効にするために次のオプションを使ってください：
 
 ```
-brakeman --no-exit-on-warn --no-exit-on-error
+railroader --no-exit-on-warn --no-exit-on-error
 ```
 
 Rails 3モードで動かしたい場合は次のオプションを使います。
 
 ```
-brakeman -3
+railroader -3
 ```
 
 Rails 4モードであれば次のようになります。
 
 ```
-brakeman -4
+railroader -4
 ```
 
-Brakemanの振る舞いやチェック項目の中には、特定のバージョン名に依存したものがある点に注意してください。とはいえ、`Gemfile.lock`を使っている最近のRailsアプリケーションであれば問題にならないはずです。
+Railroaderの振る舞いやチェック項目の中には、特定のバージョン名に依存したものがある点に注意してください。とはいえ、`Gemfile.lock`を使っている最近のRailsアプリケーションであれば問題にならないはずです。
 
-Brakemanは以前、`routes.rb`をパースして、コントローラのどのメソッドがアクションとして使われているのかを推測しようとしていました。しかし、この方法は完璧ではありません（特にRails 3/4において）。そのため、現在はすべてのコントローラのメソッドがアクションと見なされます。この振る舞いを無効にしたい場合は次のオプションを使います。
-
-```
-brakeman --no-assume-routes
-```
-
-このオプションはあまり必要ではないかもしれませんが、次のようなオプションを使うと、Brakemanに対して、アプリケーションの出力がデフォルトですべてエスケープされていると伝えることができます。
+Railroaderは以前、`routes.rb`をパースして、コントローラのどのメソッドがアクションとして使われているのかを推測しようとしていました。しかし、この方法は完璧ではありません（特にRails 3/4において）。そのため、現在はすべてのコントローラのメソッドがアクションと見なされます。この振る舞いを無効にしたい場合は次のオプションを使います。
 
 ```
-brakeman --escape-html
+railroader --no-assume-routes
 ```
 
-もしBrakemanの実行が遅ければ、次のオプションを試してください。
+このオプションはあまり必要ではないかもしれませんが、次のようなオプションを使うと、Railroaderに対して、アプリケーションの出力がデフォルトですべてエスケープされていると伝えることができます。
 
 ```
-brakeman --faster
+railroader --escape-html
 ```
 
-上のオプションを使うといくつかの機能が無効になります。そのかわり、ずっと速く実行できるかもしれません（現時点では`--skip-libs --no-branching`を指定したことと同じになります）。 **警告:** このオプションを使うと、Brakemanはいくつかの脆弱性を見逃すかもしれません。
+もしRailroaderの実行が遅ければ、次のオプションを試してください。
+
+```
+railroader --faster
+```
+
+上のオプションを使うといくつかの機能が無効になります。そのかわり、ずっと速く実行できるかもしれません（現時点では`--skip-libs --no-branching`を指定したことと同じになります）。 **警告:** このオプションを使うと、Railroaderはいくつかの脆弱性を見逃すかもしれません。
 
 `if`文におけるデータフロー感度（flow sensitivity、経路や順序の解析）を無効にする場合は次のオプションを使います。
 
 ```
-brakeman --no-branching
+railroader --no-branching
 ```
 
 すべて無効にするかわりに、解析する分岐の数を指定することもできます。
 
 ```
-brakeman --branch-limit LIMIT
+railroader --branch-limit LIMIT
 ```
 
-`LIMIT`は整数値を指定してください。`0`は`--no-branching`とほぼ同じなので、`--no-branching`の方がいいでしょう。デフォルト値は`5`です。一般的に数字が小さくなるほどBrakemanの実行が速くなります。`-1`は無制限の意味になります。
+`LIMIT`は整数値を指定してください。`0`は`--no-branching`とほぼ同じなので、`--no-branching`の方がいいでしょう。デフォルト値は`5`です。一般的に数字が小さくなるほどRailroaderの実行が速くなります。`-1`は無制限の意味になります。
 
 特定のファイル、またはディレクトリをスキップする場合は次のオプションを使います。
 
 ```
-brakeman --skip-files file1,/path1/,path2/
+railroader --skip-files file1,/path1/,path2/
 ```
 
 ディレクトリはアプリケーションのルートパスからの相対パスにマッチします。また、使用しているプラットフォームのパスセパレータ（たとえば`/`）で終わる必要があります。上の実行例は以下ルールでマッチ、スキップします。
@@ -112,39 +112,39 @@ brakeman --skip-files file1,/path1/,path2/
 - `/path1`の中のあらゆるファイル。`/`で始まっているので、アプリケーションのルートディレクトリ以下のディレクトリにだけマッチします。たとえば、`/lib/path1/some_path1_file.rb`はスキャン対象になります。
 - `path2`という名前のあらゆるディレクトリ。`/`で始まっていないので、パスの一部に`path2`という名前が含まれるディレクトリがスキップされます。たとえば、`/lib/path2/some_lib_for_testing.rb`はスキャンされません。
 
-Brakemanは「全体プログラム（whole program）」解析を実行する点に注意してください。そのため、ファイルをスキップするとそれ以外のファイルからも警告が出力されるかもしれません。
+Railroaderは「全体プログラム（whole program）」解析を実行する点に注意してください。そのため、ファイルをスキップするとそれ以外のファイルからも警告が出力されるかもしれません。
 
 その反対で、特定のファイルだけを指定する、ちょっと危険なオプションもあります。
 
 ```
-brakeman --only-files file1,/path2/,path2/
+railroader --only-files file1,/path2/,path2/
 ```
 
-繰り返しになりますが、Brakemanはプログラム全体を解析します。そのため、ファイルの一部だけをスキャンすると、予期しない動きをするかもしれません。また、特定のファイルが除外されると、Brakemanは正常に機能しないかもしれません。
+繰り返しになりますが、Railroaderはプログラム全体を解析します。そのため、ファイルの一部だけをスキャンすると、予期しない動きをするかもしれません。また、特定のファイルが除外されると、Railroaderは正常に機能しないかもしれません。
 
 `lib/`ディレクトリに対する処理をスキップする場合は次のオプションを使います。
 
 ```
-brakeman --skip-libs
+railroader --skip-libs
 ```
 
 チェック項目の一部を実行する場合は次のオプションを使います。
 
 ```
-brakeman --test Check1,Check2,etc
+railroader --test Check1,Check2,etc
 ```
 
 特定のチェック項目を除外する場合はこうします。
 
 ```
-brakeman --except Check1,Check2,etc
+railroader --except Check1,Check2,etc
 ```
 
 チェック項目名の`Check`の部分は省略可能です。たとえば、次の2つのオプションは同じ意味になります。
 
 ```
-brakeman --test CheckSQL
-brakeman --test SQL
+railroader --test CheckSQL
+railroader --test SQL
 ```
 
 ## 出力オプション
@@ -152,13 +152,13 @@ brakeman --test SQL
 デバッグ情報をすべて見たい場合は次のオプションを実行します。
 
 ```
-brakeman -d
+railroader -d
 ```
 
 実行結果の出力ファイルを指定する場合は次のオプションを使います。
 
 ```
-brakeman -o output_file
+railroader -o output_file
 ```
 
 出力フォーマットはファイル拡張子、もしくは`-f`オプションによって決まります。現在有効なオプションは、`text`、`html`、`tabs`、`json`、`markdown`、`csv`です。
@@ -166,31 +166,31 @@ brakeman -o output_file
 複数の出力ファイルを指定することもできます。
 
 ```
-brakeman -o output.html -o output.json
+railroader -o output.html -o output.json
 ```
 
 HTMLレポートには特定のCSSスタイルシートが使えます。
 
 ```
-brakeman --css-file my_cool_styling
+railroader --css-file my_cool_styling
 ```
 
-デフォルトではBrakemanは同じ行にある同じタイプの警告を1個しか出力しません。これを無効にする場合は次のオプションを使います。
+デフォルトではRailroaderは同じ行にある同じタイプの警告を1個しか出力しません。これを無効にする場合は次のオプションを使います。
 
 ```
-brakeman --no-combine-locations
+railroader --no-combine-locations
 ```
 
 "dangerous"な値や、"user input"による値の警告ハイライトを無効にする場合は次のオプションを使います。
 
 ```
-brakeman --no-highlights
+railroader --no-highlights
 ```
 
 コントローラとルーティングの情報を報告する場合は次のオプションを使います。
 
 ```
-brakeman --routes
+railroader --routes
 ```
 
 ですが、アプリケーションにどんなルーティングが設定されているか確認したい場合は、次のコマンドを使ってください（訳注: Rails 5以降は`rails routes`になります）。
@@ -202,27 +202,27 @@ rake routes
 HTMLレポートのメッセージの長さを制限する場合は、次のオプションを使います。
 
 ```
-brakeman --message-limit LIMIT
+railroader --message-limit LIMIT
 ```
 
 デフォルトは無制限です。
 
-Brakemanは`attr_accessible`を持たないモデルに対して警告を発します。HTMLレポートでは次のオプションを使って、全モデルの警告を1つの警告にまとめた方が便利かもしれません（訳注: `attr_accessible`はRails 3以前のオプションだったので、最近のRailsアプリケーションでは無関係かもしれません）。
+Railroaderは`attr_accessible`を持たないモデルに対して警告を発します。HTMLレポートでは次のオプションを使って、全モデルの警告を1つの警告にまとめた方が便利かもしれません（訳注: `attr_accessible`はRails 3以前のオプションだったので、最近のRailsアプリケーションでは無関係かもしれません）。
 
 ```
-brakeman --no-separate-models
+railroader --no-separate-models
 ```
 
 巨大なレポートではなく、サマリーだけを取得したい場合もあるかもしれません。そんな場合は次のオプションを使います。
 
 ```
-brakeman --summary
+railroader --summary
 ```
 
 デフォルトではレポートには相対パスが使われます。かわりに絶対パスを使いたい場合は次のオプションを使います。
 
 ```
-brakeman --absolute-paths
+railroader --absolute-paths
 ```
 
 上のオプションはHTMLとタブ区切りのレポートには影響しません。
@@ -230,58 +230,58 @@ brakeman --absolute-paths
 Markdown出力時にGitHub上のファイルへリンクを貼りたい場合は、次のオプションを使ってください。
 
 ```
-brakeman --github-repo USER/REPO[/PATH][@REF]
+railroader --github-repo USER/REPO[/PATH][@REF]
 ```
 
 次はその使用例です。
 
 ```
-brakeman --github-repo presidentbeef/inject-some-sql
+railroader --github-repo presidentbeef/inject-some-sql
 ```
 
 前回実行したスキャン結果と今回の結果を比較したい場合は、JSON出力と次のオプションを使ってください。
 
 ```
-brakeman --compare old_report.json
+railroader --compare old_report.json
 ```
 
 上のオプションを付けて実行すると、修正された警告と新しい警告の2種類のリストが出力されます。
 
-デフォルトではBrakemanは`less`ページャー（`less`コマンド）を使って結果を出力します。ターミナルに直接出力したい場合は、次のオプションを使ってください。
+デフォルトではRailroaderは`less`ページャー（`less`コマンド）を使って結果を出力します。ターミナルに直接出力したい場合は、次のオプションを使ってください。
 
 ```
-brakeman --no-pager
+railroader --no-pager
 ```
 
 ## 無視に関するオプション
 
-Brakemanは設定次第で警告を無視することができます。デフォルトでは`config/brakeman.ignore`という設定ファイルが使われます。
+Railroaderは設定次第で警告を無視することができます。デフォルトでは`config/railroader.ignore`という設定ファイルが使われます。
 
 設定ファイルを指定したいときは次のオプションを使います。
 
 ```
-brakeman -i path/to/config.ignore
+railroader -i path/to/config.ignore
 ```
 
 このファイルの作成と管理を行う場合は次のオプションを使ってください。
 
 ```
-brakeman -I
+railroader -I
 ```
 
 モデルの属性に関するXSSの疑いを無視する場合は次のオプションを使います。
 
 ```
-brakeman --ignore-model-output
+railroader --ignore-model-output
 ```
 
-Brakemanは`attr_protected`を使っているモデルに対して警告を発します。この警告を抑制する場合は次のオプションを使います（訳注: `attr_protected`もRails 3以前のオプションだったので、最近のRailsアプリケーションでは無関係かもしれません）。
+Railroaderは`attr_protected`を使っているモデルに対して警告を発します。この警告を抑制する場合は次のオプションを使います（訳注: `attr_protected`もRails 3以前のオプションだったので、最近のRailsアプリケーションでは無関係かもしれません）。
 
 ```
-brakeman --ignore-protected
+railroader --ignore-protected
 ```
 
-信頼できないデータを扱う未知のメソッドがあった場合、Brakemanは危険な処理と見なします。たとえば、次のコードは警告の対象になります（Rails 2の場合）。
+信頼できないデータを扱う未知のメソッドがあった場合、Railroaderは危険な処理と見なします。たとえば、次のコードは警告の対象になります（Rails 2の場合）。
 
 ```
 <%= some_method(:option => params[:input]) %>
@@ -290,7 +290,7 @@ brakeman --ignore-protected
 信頼できないデータが直接使われている場合のみ警告を出したいときは、次のオプションを使います。
 
 ```
-brakeman --report-direct
+railroader --report-direct
 ```
 
 とはいえ、各チェック項目における上記オプションのサポート状況にはあまり一貫性がありません。
@@ -298,18 +298,18 @@ brakeman --report-direct
 特定のメソッドが適切にエスケープされた値を出力し、そのメソッドがXSSチェックで警告されないようにするためには、次のオプションを使います。
 
 ```
-brakeman --safe-methods benign_method_escapes_output,totally_safe_from_xss
+railroader --safe-methods benign_method_escapes_output,totally_safe_from_xss
 ```
 
-Brakemanは`link_to`メソッドを使って作成されたURLにユーザー入力が含まれていると警告を発します。Railsにはこの方法で作成されたURLを安全にする方法がないため（例：プロトコルをHTTP(S)に限定する、など）、安全なメソッドを無視したい場合は次のオプションを使ってください。
+Railroaderは`link_to`メソッドを使って作成されたURLにユーザー入力が含まれていると警告を発します。Railsにはこの方法で作成されたURLを安全にする方法がないため（例：プロトコルをHTTP(S)に限定する、など）、安全なメソッドを無視したい場合は次のオプションを使ってください。
 
 ```
-brakeman --url-safe-methods ensure_safe_protocol_or_something
+railroader --url-safe-methods ensure_safe_protocol_or_something
 ```
 
 ## Confidenceレベル（自信レベル）
 
-Brakemanは各警告にconfidenceレベルを設定しています。これは出力された警告がどれくらい問題なのか、大まかに見積もった値です。当然ながら、この値を絶対的なものとして信用するのはよくありません。
+Railroaderは各警告にconfidenceレベルを設定しています。これは出力された警告がどれくらい問題なのか、大まかに見積もった値です。当然ながら、この値を絶対的なものとして信用するのはよくありません。
 
 confidenceレベルは3段階あります。
 
@@ -320,18 +320,18 @@ confidenceレベルは3段階あります。
 指定したconfidenceレベル以上の警告だけを受け取りたい場合は、次のオプションを使います。
 
 ```
-brakeman -w3
+railroader -w3
 ```
 
 `-w`スイッチには1から3までの数字を指定できます。1は低レベル（全警告を出力）で、3は高レベル（confidenceレベルが最高の警告のみ出力）です。
 
 ## 設定ファイル
 
-BrakemanのオプションはYAMLファイルで読み書きできます。設定ファイルを作成する手間を省きたい場合は`-C`オプションを使うと、そこで指定されているオプションを出力することができます。
+RailroaderのオプションはYAMLファイルで読み書きできます。設定ファイルを作成する手間を省きたい場合は`-C`オプションを使うと、そこで指定されているオプションを出力することができます。
 
 コマンドラインで指定されたオプションは設定ファイルよりも優先されます。
 
-設定ファイルのデフォルトの場所は`./config/brakeman.yml`、`~/.brakeman/config.yml`、`/etc/brakeman/config.yml`です。
+設定ファイルのデフォルトの場所は`./config/railroader.yml`、`~/.railroader/config.yml`、`/etc/railroader/config.yml`です。
 
 `-c`オプションを使うと、使用する設定ファイルを指定できます。
 
@@ -340,25 +340,25 @@ BrakemanのオプションはYAMLファイルで読み書きできます。設�
 利用可能なチェック項目を簡単な説明付きで一覧表示する場合は次のオプションを使います。
 
 ```
-brakeman --checks
+railroader --checks
 ```
 
 任意で実行される（デフォルトでは実行されない）チェック項目を表示する場合は次のオプションを使います。
 
 ```
-brakeman --optional-checks
+railroader --optional-checks
 ```
 
-Brakemanのバージョンを確認する場合は次のオプションを使います。
+Railroaderのバージョンを確認する場合は次のオプションを使います。
 
 ```
-brakeman --version
+railroader --version
 ```
 
 オプションの一覧を見たい場合は次のオプションを使います。
 
 ```
-brakeman --help
+railroader --help
 ```
 
 ---

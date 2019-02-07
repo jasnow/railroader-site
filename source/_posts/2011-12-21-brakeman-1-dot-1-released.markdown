@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 1.1 Released"
+title: "Railroader 1.1 Released"
 date: 2011-12-21 19:12
 comments: true
 categories: 
@@ -14,13 +14,13 @@ Changes since 1.0:
  * Performance improvements for source processing
  * Better progress reporting
  * Handle basic operators like << + - * /
- * Rescue more errors to prevent Brakeman from completely bailing out
+ * Rescue more errors to prevent Railroader from completely bailing out
  * Compatibility with newer Haml versions
  * Fix some 1.9 warnings
 
 ### Relax Dependencies
 
-The version dependencies for Brakeman have been relaxed somewhat, so it should work fine if included in a Rails 3 Gemfile. Unfortunately, this makes it a little harder to be sure it will work with all setups. Please report any problems!
+The version dependencies for Railroader have been relaxed somewhat, so it should work fine if included in a Rails 3 Gemfile. Unfortunately, this makes it a little harder to be sure it will work with all setups. Please report any problems!
 
 ### Performance Improvements
 
@@ -30,16 +30,16 @@ This release makes some improvements that should improve scan times. If it takes
 
 ### Progress Reporting
 
-Brakeman will now provide better feedback about its progress while processing applications. For even more output, use the `--debug` option.
+Railroader will now provide better feedback about its progress while processing applications. For even more output, use the `--debug` option.
 
 ### Handle More Operators
 
-See [here](https://github.com/presidentbeef/brakeman/wiki/Using-Brakeman::AliasProcessor) for the kinds of simple processing Brakeman can do.
+See [here](https://github.com/presidentbeef/railroader/wiki/Using-Railroader::AliasProcessor) for the kinds of simple processing Railroader can do.
 
 ### Rescue More Errors
 
-Brakeman does its best to never completely abort execution and tries to always provide an analysis of whatever it can manage. This release rescues exceptions that may occur while processing configurations and Gemfiles.
+Railroader does its best to never completely abort execution and tries to always provide an analysis of whatever it can manage. This release rescues exceptions that may occur while processing configurations and Gemfiles.
 
 ### Problems
 
-If you run into any problems, don't hesitate to send a tweet to [@Brakemanscanner](http://twitter.com/brakemanscanner) or [file an issue](https://github.com/presidentbeef/brakeman/issues) on GitHub!
+If you run into any problems, don't hesitate to send a tweet to [@Railroaderscanner](http://twitter.com/railroaderscanner) or [file an issue](https://github.com/presidentbeef/railroader/issues) on GitHub!

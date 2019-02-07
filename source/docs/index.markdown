@@ -11,8 +11,8 @@ footer: true
 
 * [Introduction]({{ root_url }}/docs/introduction)
 * [Installation]({{ root_url }}/docs/install)
-* [Running Brakeman]({{ root_url }}/docs/running)
-* [Brakeman Options]({{ root_url }}/docs/options)
+* [Running Railroader]({{ root_url }}/docs/running)
+* [Railroader Options]({{ root_url }}/docs/options)
 
 ## Next Steps
 
@@ -20,8 +20,8 @@ footer: true
 * [Warning Types]({{ root_url }}/docs/warning_types)
 * [Reducing False Positives](/docs/reducing_false_positives)
 * [Ignoring False Positives](/docs/ignoring_false_positives)
-* [Using Brakeman as a Library](/docs/brakeman_as_a_library)
-* [Brakeman and Rake](/docs/rake)
+* [Using Railroader as a Library](/docs/railroader_as_a_library)
+* [Railroader and Rake](/docs/rake)
 
 ## More Information
 
@@ -29,7 +29,7 @@ footer: true
 * [Presentations](/docs/presentations)
 * [FAQ]({{ root_url }}/docs/faq)
 * [Troubleshooting](/docs/troubleshooting)
-* [Testing Brakeman](/docs/testing_brakeman)
+* [Testing Railroader](/docs/testing_railroader)
 * [Contributing](/docs/contributing)
 
 ## Hudson/Jenkins Integration

@@ -7,23 +7,23 @@ sharing: false
 footer: true
 ---
 
-By default, Brakeman reports as much as possible. Because there is no way for Brakeman to know if certain items are actually safe or not, it errs on the side of reporting _too much_ rather than possibly not reporting a real problem. Sometimes, though, these false positives can become overwhelming. Brakeman does provides many options for customizing reports. It is also possible [to ignore specific warnings](/docs/ignoring_false_positives).
+By default, Railroader reports as much as possible. Because there is no way for Railroader to know if certain items are actually safe or not, it errs on the side of reporting _too much_ rather than possibly not reporting a real problem. Sometimes, though, these false positives can become overwhelming. Railroader does provides many options for customizing reports. It is also possible [to ignore specific warnings](/docs/ignoring_false_positives).
 
-It is recommended to always run Brakeman with the default settings first (and then periodically after that), but it is possible to narrow down the results to make them less annoying.
+It is recommended to always run Railroader with the default settings first (and then periodically after that), but it is possible to narrow down the results to make them less annoying.
 
 ### Specify Checks to Run
 
-When running Brakeman, one can specify a set of checks to run or a set to exclude using the `--test` or `--except`, respectively. These options take a comma-separated list of check names, which are case-sensitive. Use `brakeman --checks` to get a list of the exact check names.
+When running Railroader, one can specify a set of checks to run or a set to exclude using the `--test` or `--except`, respectively. These options take a comma-separated list of check names, which are case-sensitive. Use `railroader --checks` to get a list of the exact check names.
 
 For example, to only check for SQL injection and cross-site scripting:
 
-    brakeman --test CheckSQL,CheckCrossSiteScripting
+    railroader --test CheckSQL,CheckCrossSiteScripting
 
 _('Check' can actually be omitted from the names.)_
 
 To exclude checks for dynamic render paths:
 
-    brakeman --except CheckRender
+    railroader --except CheckRender
 
 ### Set Confidence Threshold
 
@@ -37,11 +37,11 @@ If an applications has custome sanitizing methods or just methods which are know
 
 For example:
 
-    brakeman --safe-methods this_one,that_one,totally_safe,my_sanitizer
+    railroader --safe-methods this_one,that_one,totally_safe,my_sanitizer
 
 ### Only Reporting Direct Vulnerabilities
 
-With the default settings, Brakeman will report cross-site scripting vulnerabilities if the return value of a method where user input is a _parameter_ is output.
+With the default settings, Railroader will report cross-site scripting vulnerabilities if the return value of a method where user input is a _parameter_ is output.
 
 For example, this will raise a warning unless `some_method` is marked as safe like above:
 
@@ -51,7 +51,7 @@ To ignore this kind of output, use the `--report-direct` option. This also appli
 
 ### Ignoring Model Attributes
 
-Brakeman assumes database values are suspect (and so should you). But for some applications this does not make sense. Use the `--ignore-model-output` option to suppress reporting model attributes as cross-site scripting vulnerabilities.
+Railroader assumes database values are suspect (and so should you). But for some applications this does not make sense. Use the `--ignore-model-output` option to suppress reporting model attributes as cross-site scripting vulnerabilities.
 
 ---
 

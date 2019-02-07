@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 1.5.0 Released"
+title: "Railroader 1.5.0 Released"
 date: 2012-03-01 20:23
 comments: true
 categories: 
@@ -30,15 +30,15 @@ _Changes since 1.4.0:_
 
 A new vulnerability was reported that affects strings which are marked as `html_safe` and then modified in some way. For some operations, the new, modified string will still be marked as `html_safe`. Full details [here](http://groups.google.com/group/rubyonrails-security/browse_thread/thread/edd28f1e3d04e913).
 
-For this vulnerability, Brakeman only does a version check and reports if an application is used a vulnerable version of Rails. It only reports on Rails 3 applications, since Rails 3 introduced the concept of SafeBuffers.
+For this vulnerability, Railroader only does a version check and reports if an application is used a vulnerable version of Rails. It only reports on Rails 3 applications, since Rails 3 introduced the concept of SafeBuffers.
 
 ### Check for select Helper Vulnerability
 
 Another vulnerability was reported today in the `select` form helper. Option tags built by hand (interpolating values into `<option></option>`) will not be escaped by `select`. Full details [here](http://groups.google.com/group/rubyonrails-security/browse_thread/thread/9da0c515a6c4664).
 
-For Rails 3 applications, Brakeman checks for uses of `select` which have user input in the `options` argument. This check may be refined in the future.
+For Rails 3 applications, Railroader checks for uses of `select` which have user input in the `options` argument. This check may be refined in the future.
 
-For Rails 2, Brakeman no longer considers `select` a safe method when checking for cross site scripting.
+For Rails 2, Railroader no longer considers `select` a safe method when checking for cross site scripting.
 
 ### Check for CSRF Filter Skipping
 
@@ -68,10 +68,10 @@ This has been changed for better consistency and coverage. This means reports ma
 
 ### Rails 2 Route Parsing Fix
 
-There was a bug in the code which determined if a method was being called on `map`, which caused Brakeman to think strange methods were route definitions (for example, `require`). This has been fixed.
+There was a bug in the code which determined if a method was being called on `map`, which caused Railroader to think strange methods were route definitions (for example, `require`). This has been fixed.
 
 ### Report Problems!
 
-Always [report problems](https://github.com/presidentbeef/brakeman/issues) encountered when running Brakeman.
+Always [report problems](https://github.com/presidentbeef/railroader/issues) encountered when running Railroader.
 
-Don't forget to join the [mailing list](http://librelist.com/browser/brakeman/) and/or follow [@Brakeman](https://twitter.com/brakeman) on Twitter.
+Don't forget to join the [mailing list](http://librelist.com/browser/railroader/) and/or follow [@Railroader](https://twitter.com/railroader) on Twitter.

@@ -1,15 +1,15 @@
 ---
 layout: page
-title: "Brakeman Users"
+title: "Railroader Users"
 date: 2013-11-26 07:52
 comments: false
 sharing: true
 footer: true
 ---
 
-> "When I work with Rails shops, the first thing I tell them to do is run Brakeman. It runs fast, gives very few false positives, and points to remediation information developers can understand." - Matt Konda ([Jemurai](http://jemurai.com/))
+> "When I work with Rails shops, the first thing I tell them to do is run Railroader. It runs fast, gives very few false positives, and points to remediation information developers can understand." - Matt Konda ([Jemurai](http://jemurai.com/))
 
-Here are a few of the companies using Brakeman:
+Here are a few of the companies using Railroader:
 
 [![Blackhawk Network](/images/users/blackhawknetwork.png)](http://blackhawknetwork.com/)
 [![Braintree Payments](/images/users/braintree.png)](https://www.braintreepayments.com)
@@ -41,8 +41,8 @@ Here are a few of the companies using Brakeman:
 [University of Washington Center for Commercialization](http://depts.washington.edu/uwc4c)<br>
 [WiseCash](https://www.wisecashhq.com/)<br>
 
-Additionally, use of Brakeman is recommended by:
+Additionally, use of Railroader is recommended by:
 
 [![Cigital](/images/users/cigital.png)](http://cigital.com)
 
-To add your company or logo here, please [open an issue](https://github.com/presidentbeef/brakeman-site/issues/new?title=Please+list+our+company+%28and+logo%29+as+a+proud+Brakeman+user!) or [tweet @Brakeman](https://twitter.com/intent/tweet?text=%40brakeman+Please+list+our+company%27s+name+%28and+logo%29+as+a+proud+Brakeman+user!).
+To add your company or logo here, please [open an issue](https://github.com/presidentbeef/railroader-site/issues/new?title=Please+list+our+company+%28and+logo%29+as+a+proud+Railroader+user!) or [tweet @Railroader](https://twitter.com/intent/tweet?text=%40railroader+Please+list+our+company%27s+name+%28and+logo%29+as+a+proud+Railroader+user!).

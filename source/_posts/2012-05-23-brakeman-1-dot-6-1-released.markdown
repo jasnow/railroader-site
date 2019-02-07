@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 1.6.1 Released"
+title: "Railroader 1.6.1 Released"
 date: 2012-05-23 12:45
 comments: true
 categories: 
@@ -22,7 +22,7 @@ _Changes since 1.6.0_:
 
 ### Updated SQL Injection Check
 
-`CheckSQL` has been completely revamped. Brakeman now has a much better understanding of the various ActiveRecord::FinderMethods and ActiveRecord::QueryMethods, as well as their options.
+`CheckSQL` has been completely revamped. Railroader now has a much better understanding of the various ActiveRecord::FinderMethods and ActiveRecord::QueryMethods, as well as their options.
 
 The check is also more conservative about what it warns on. Previously, since string interpolation is the main entry point for SQL injection in Rails, any interpolated value in a query would generate a warning. Now, "safe" sanitization methods, obviously safe methods like `to_i` and `id`, constants, strings, and other literal values should not cause warnings.
 
@@ -34,7 +34,7 @@ Methods on controller mixins that are used as actions should now be processed as
 
 ### Check for Inherited Mass Assignment Protection
 
-Since mass assignment protection via `attr_accessible` is inheritable, Brakeman will no longer warn about models whose parent uses `attr_accessible`.
+Since mass assignment protection via `attr_accessible` is inheritable, Railroader will no longer warn about models whose parent uses `attr_accessible`.
 
 ### Template Option in Render
 
@@ -56,8 +56,8 @@ In the rescanning logic, templates which are related to a changed file (a view o
 
 ### Reporting Issues
 
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release!
+Please report any [issues](https://github.com/presidentbeef/railroader/issues) with this release!
 
-Also consider joining the [mailing list](http://brakemanscanner.org/contact/) or following [@brakeman](https://twitter.com/brakeman) on Twitter.
+Also consider joining the [mailing list](http://railroaderscanner.org/contact/) or following [@railroader](https://twitter.com/railroader) on Twitter.
 
-Don't forget to check out the [RailsConf Brakeman presentation slides](https://speakerdeck.com/u/presidentbeef/p/keeping-rails-applications-on-track-with-brakeman). 
+Don't forget to check out the [RailsConf Railroader presentation slides](https://speakerdeck.com/u/presidentbeef/p/keeping-rails-applications-on-track-with-railroader). 

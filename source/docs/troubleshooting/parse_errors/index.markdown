@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-Brakeman relies on [ruby\_parser](https://github.com/seattlerb/ruby_parser) for parsing Ruby code.
+Railroader relies on [ruby\_parser](https://github.com/seattlerb/ruby_parser) for parsing Ruby code.
 
 The steps below should help narrow down the source of the problem.
 
@@ -25,7 +25,7 @@ If the file is an ERB template, then the output of `erb` or `erubis` must be che
 
 Run `erubis -x file_name.html.erb | ruby -c` to check using Erubis.
 
-_Important:_ Rails uses a slightly modified version of ERB, so the output from these tools is not exactly the same as what Rails sees. Brakeman attempts to emulate the Rails version.
+_Important:_ Rails uses a slightly modified version of ERB, so the output from these tools is not exactly the same as what Rails sees. Railroader attempts to emulate the Rails version.
 
 ### Check Haml Output
 
@@ -35,7 +35,7 @@ Run `haml -e --debug file_name.html.haml` to check the output. Note that this wi
 
 ### File an Issue
 
-Please file [an issue](https://github.com/presidentbeef/brakeman/issues) with an example of the syntax which fails to parse.
+Please file [an issue](https://github.com/presidentbeef/railroader/issues) with an example of the syntax which fails to parse.
 
 ---
 

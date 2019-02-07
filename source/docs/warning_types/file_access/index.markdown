@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-Using user input when accessing files (local or remote) will raise a warning in Brakeman.
+Using user input when accessing files (local or remote) will raise a warning in Railroader.
 
 For example
 

@@ -27,15 +27,15 @@ Query parameters must be explicitly whitelisted via `permit` in order to be used
 
 Care should be taken to only whitelist values that are safe for a user (or attacker) to set. Foreign keys such as `account_id` are likely unsafe, allowing an attacker to manipulate records belonging to other accounts.
 
-Brakeman will warn on potentially dangerous attributes that are whitelisted.
+Railroader will warn on potentially dangerous attributes that are whitelisted.
 
-Brakeman will also warn about uses of `params.permit!`, since that allows everything.
+Railroader will also warn about uses of `params.permit!`, since that allows everything.
 
 
 ### Rails Without Strong Parameters
 
 In older versions of Rails, `attr_accessible` and `attr_protected` can be used to limit mass assignment.
-However, Brakeman will warn unless `attr_accessible` is used, or mass assignment is completely disabled.
+However, Railroader will warn unless `attr_accessible` is used, or mass assignment is completely disabled.
 
 There are two different mass assignment warnings which can arise. The first is when mass assignment actually occurs, such as the example above. This results in a warning like
 
@@ -55,7 +55,7 @@ Unfortunately, it can also easily be bypassed:
 
     User.new(params[:user], :without_protection => true)
 
-Brakeman will warn on uses of `without_protection`.
+Railroader will warn on uses of `without_protection`.
 
 ### More Information
 

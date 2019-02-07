@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 1.5.2 Released - Important Fixes"
+title: "Railroader 1.5.2 Released - Important Fixes"
 date: 2012-03-22 13:34
 comments: true
 categories: 
@@ -22,9 +22,9 @@ _Changes since 1.5.1:_
 
 ### Views with rails\_xss
 
-Some previous changes to make sure Brakeman was processing ERB views the same way as the `rails_xss` plugin unfortunately broke the processing of those views.
+Some previous changes to make sure Railroader was processing ERB views the same way as the `rails_xss` plugin unfortunately broke the processing of those views.
 
-These changes caused Brakeman to not report *any* output from ERB views when the `rails_xss` plugin was in use, hiding any XSS vulnerabilities in those views.
+These changes caused Railroader to not report *any* output from ERB views when the `rails_xss` plugin was in use, hiding any XSS vulnerabilities in those views.
 
 This now fixed, so if you are using the `rails_xss` plugin, it is highly recommended to upgrade.
 
@@ -40,9 +40,9 @@ In this release, the check for XSS in `link_to` has been updated to handle `link
 
 ### Revert to ruby\_parser for Ruby 1.8
 
-Brakeman has been using a vendored version of [ruby\_parser](https://github.com/seattlerb/ruby_parser) with some updates to Ruby 1.9 syntax parsing. Unfortunately, that version also introduced some regressions for parsing Ruby 1.8 syntax.
+Railroader has been using a vendored version of [ruby\_parser](https://github.com/seattlerb/ruby_parser) with some updates to Ruby 1.9 syntax parsing. Unfortunately, that version also introduced some regressions for parsing Ruby 1.8 syntax.
 
-To handle this, Brakeman will now only use the vendored version for 1.9 parsing, but the regular gem version for 1.8 syntax parsing. This should fix some parse errors people are seeing for Ruby 1.8 apps.
+To handle this, Railroader will now only use the vendored version for 1.9 parsing, but the regular gem version for 1.8 syntax parsing. This should fix some parse errors people are seeing for Ruby 1.8 apps.
 
 ### Dynamic Render Path Updates
 
@@ -50,10 +50,10 @@ The check for dynamic render paths was not very good, but it is better now. "Dyn
 
 ### Stacktrace Output
 
-Brakeman will now output a stacktrace if interrupted while running with the `-d` option. This is mostly helpful when Brakeman appears to "hang". 
+Railroader will now output a stacktrace if interrupted while running with the `-d` option. This is mostly helpful when Railroader appears to "hang". 
 
 ### Reporting Issues
 
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues)!
+Please report any [issues](https://github.com/presidentbeef/railroader/issues)!
 
-Also consider joining the [mailing list](http://brakemanscanner.org/contact/) or following [@brakeman](https://twitter.com/brakeman) on Twitter.
+Also consider joining the [mailing list](http://railroaderscanner.org/contact/) or following [@railroader](https://twitter.com/railroader) on Twitter.

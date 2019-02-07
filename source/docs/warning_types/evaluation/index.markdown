@@ -8,7 +8,7 @@ footer: true
 ---
 
 <script>
-window.location.replace("http://brakemanscanner.org/docs/warning_types/dangerous_eval/");
+window.location.replace("http://railroaderscanner.org/docs/warning_types/dangerous_eval/");
 </script>
 
 Content moved to [Dangerous Eval](dangerous_eval/).

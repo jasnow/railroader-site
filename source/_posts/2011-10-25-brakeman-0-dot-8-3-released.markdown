@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brakeman 0.8.3 Released"
+title: "Railroader 0.8.3 Released"
 date: 2011-10-25 10:00
 comments: true
 categories: 
@@ -21,7 +21,7 @@ Changes since 0.8.0:
 
 ### Fix for .tabs Format
 
-Brakeman will now pay attention to the `-w` flag (setting minimum confidence levels) when using the `.tabs` format.
+Railroader will now pay attention to the `-w` flag (setting minimum confidence levels) when using the `.tabs` format.
 
 ### Escape Error Messages in HTML
 
@@ -29,7 +29,7 @@ Error message will now be escaped in the HTML output so they do not mess up the 
 
 ### --skip-libs Option
 
-The `--skip-libs` option will cause Brakeman to not process the files in the `lib` directory. At the moment, the results from this directory are only used in a couple places, so it is unlikely that skipping them will cause any problems.
+The `--skip-libs` option will cause Railroader to not process the files in the `lib` directory. At the moment, the results from this directory are only used in a couple places, so it is unlikely that skipping them will cause any problems.
 
 ### Parallel Checks
 
@@ -41,6 +41,6 @@ This is a stop-gap measure until [ruby_parser](https://github.com/seattlerb/ruby
 
 ### Route Processing
 
-Brakeman will no longer crash if there are problems parsing `routes.rb`. Instead, it will assume all public methods on controllers are actions. The `-a` option will also turn this behavior on. 
+Railroader will no longer crash if there are problems parsing `routes.rb`. Instead, it will assume all public methods on controllers are actions. The `-a` option will also turn this behavior on. 
 
 Rails 3.1 route parsing is still a work in progress, so this should at least allow analysis of 3.1 apps, even if it means slightly reduced accuracy.

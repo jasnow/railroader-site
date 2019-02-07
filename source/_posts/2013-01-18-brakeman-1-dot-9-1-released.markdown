@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Brakeman 1.9.1 Released"
+title: "Railroader 1.9.1 Released"
 date: 2013-01-18 17:36
 comments: true
 categories: 
 ---
 
-This released was forced due to messed up dependencies with Brakeman 1.9.0 and Ruby2Ruby - my fault entirely! As such, this release does not match the roadmap for 1.9.1, which will be changed to 1.9.2.
+This released was forced due to messed up dependencies with Railroader 1.9.0 and Ruby2Ruby - my fault entirely! As such, this release does not match the roadmap for 1.9.1, which will be changed to 1.9.2.
 
 _Changes since 1.9.0_:
 
@@ -16,9 +16,9 @@ _Changes since 1.9.0_:
  * Add check for unsafe `YAML.load`
  * Update to RubyParser 3.1.1 (neersighted)
  * Remove ActiveSupport dependency (Neil Matatall)
- * Do not warn on arrays passed to `link_to` (Neil Matatall) ([#232](https://github.com/presidentbeef/brakeman/issues/232))
- * Warn on secret tokens ([#200](https://github.com/presidentbeef/brakeman/issues/200))
- * Warn on more mass assignment methods ([#223](https://github.com/presidentbeef/brakeman/issues/223))
+ * Do not warn on arrays passed to `link_to` (Neil Matatall) ([#232](https://github.com/presidentbeef/railroader/issues/232))
+ * Warn on secret tokens ([#200](https://github.com/presidentbeef/railroader/issues/200))
+ * Warn on more mass assignment methods ([#223](https://github.com/presidentbeef/railroader/issues/223))
 
 ### CVE-2012-5664 - SQL Injection
 
@@ -26,13 +26,13 @@ _Changes since 1.9.0_:
 
 The provided fix is to only accept the hash if the dynamic finder is called with the proper number of arguments. A workaround is to always cast input to dynamic finders.
 
-([changes](https://github.com/presidentbeef/brakeman/pull/228))
+([changes](https://github.com/presidentbeef/railroader/pull/228))
 
 ### CVE-2013-0155 - SQL Injection
 
 [CVE-2013-0155](https://groups.google.com/d/topic/rubyonrails-security/c7jT-EeN9eI/discussion) is a SQL vulnerability where certain JSON input can cause `find` methods to add `NULL` as a valid value.
 
-([changes](https://github.com/presidentbeef/brakeman/pull/239))
+([changes](https://github.com/presidentbeef/railroader/pull/239))
 
 ### CVE-2013-0156 - Remote Code Execution
 
@@ -42,38 +42,38 @@ Besides upgrading Rails, there are workarounds for this issue: disable XML reque
 
 Exploits for this vulnerability are easily available and already in use in the wild. Please upgrade, patch, or use a workaround.
 
-([changes](https://github.com/presidentbeef/brakeman/pull/239))
+([changes](https://github.com/presidentbeef/railroader/pull/239))
 
 ### Check for `YAML.load`
 
-In light of [CVE-2013-0156](https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion), Brakeman will now warn on any uses of `YAML.load` with user input. Do not load arbitrary YAML in applications!
+In light of [CVE-2013-0156](https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion), Railroader will now warn on any uses of `YAML.load` with user input. Do not load arbitrary YAML in applications!
 
 ### Dependency Changes 
 
-Brakeman now uses the latest RubyParser and Ruby2Ruby versions.
+Railroader now uses the latest RubyParser and Ruby2Ruby versions.
 
-Thanks to Neil, Brakeman no longer depends on any version of ActiveSupport or i18n.
+Thanks to Neil, Railroader no longer depends on any version of ActiveSupport or i18n.
 
 ### Namespaced URLs in `link_to`
 
-Brakeman will no longer warn on array arguments to `link_to`.
+Railroader will no longer warn on array arguments to `link_to`.
 
-([changes](https://github.com/presidentbeef/brakeman/pull/233))
+([changes](https://github.com/presidentbeef/railroader/pull/233))
 
 ### Secret Tokens
 
 Secret tokens stored in source control are bad! Doubly bad if the source code is available publicly. Anyone with access to an application's secret token can generate any session cookies they would like. See [this post](http://phenoelit.org/blog/archives/2012/12/21/let_me_github_that_for_you/index.html) for details.
 
-([changes](https://github.com/presidentbeef/brakeman/pull/227))
+([changes](https://github.com/presidentbeef/railroader/pull/227))
 
 ### More Mass Assignment
 
 Bryan Helmkamp pointed out more Rails methods which perform mass assignment. The following methods have been added: `first_or_create`, `first_or_create!`, `first_or_initialize!`, `assign_attributes`, and `update`.
 
-([changes](https://github.com/presidentbeef/brakeman/pull/234))
+([changes](https://github.com/presidentbeef/railroader/pull/234))
 
 ### Report Issues
 
-Please report any [issues](https://github.com/presidentbeef/brakeman/issues) with this release! Take a look at [this guide](https://github.com/presidentbeef/brakeman/wiki/How-to-Report-a-Brakeman-Issue) to reporting Brakeman problems.
+Please report any [issues](https://github.com/presidentbeef/railroader/issues) with this release! Take a look at [this guide](https://github.com/presidentbeef/railroader/wiki/How-to-Report-a-Railroader-Issue) to reporting Railroader problems.
 
-Also consider joining the [mailing list](http://brakemanscanner.org/contact/) or following [@brakeman](https://twitter.com/brakeman) on Twitter.
+Also consider joining the [mailing list](http://railroaderscanner.org/contact/) or following [@railroader](https://twitter.com/railroader) on Twitter.
