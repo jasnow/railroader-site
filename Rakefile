@@ -136,25 +136,25 @@ task :new_page, :filename do |t, args|
   end
 end
 
-desc "Move warning type docs from brakeman into #{source_dir}/docs/warning_types"
-task :copy_docs_from_brakeman do
+desc "Move warning type docs from railroader into #{source_dir}/docs/warning_types"
+task :copy_docs_from_railroader do
   require './plugins/titlecase.rb'
 
   FileUtils.mkdir_p(work_dir)
 
   cd work_dir do
-    FileUtils.rm_rf("brakeman")
-    system "git clone --quiet --depth=1 git@github.com:presidentbeef/brakeman.git"
+    FileUtils.rm_rf("railroader")
+    system "git clone --quiet --depth=1 git@github.com:david-a-wheeler/railroader.git"
   end
 
-  warning_types = Dir.entries("#{work_dir}/brakeman/docs/warning_types")
+  warning_types = Dir.entries("#{work_dir}/railroader/docs/warning_types")
   warning_types = warning_types.reject { |type| type.start_with?(".") }
 
   warning_types.each do |warning_type|
     title                = warning_type.gsub(/[-_]/, ' ').titlecase
     path                 = "docs/warning_types/#{warning_type}"
     filename             = "#{path}/index.markdown"
-    source_filename      = "#{work_dir}/brakeman/#{filename}"
+    source_filename      = "#{work_dir}/railroader/#{filename}"
     destination_filename = "#{source_dir}/#{filename}"
     source_contents      = File.read(source_filename)
 
