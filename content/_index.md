@@ -1,6 +1,6 @@
 ---
 title: "Railroader"
-featured_image: "/images/154101-673ab7.svg"
+featured_image: "/images/154101.svg"
 # background_color_class: "bg-white"
 description: "A security static analysis tool for Ruby on Rails applications"
 ---
