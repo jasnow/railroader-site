@@ -22,3 +22,7 @@ enableRobotsTXT = true
     name = "Use"
     url = "/use/"
 
+  [[menu.main]]
+    identifier = "Contribute"
+    name = "Contribute"
+    url = "/contribute/"
