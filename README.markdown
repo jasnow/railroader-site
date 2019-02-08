@@ -16,6 +16,44 @@ This version of the site is generated using hugo. On Ubuntu use
 snap install hugo
 ~~~~
 
+You also need to set up the "\_deploy" subdirectory so that it is a
+clone from https://github.com/david-a-wheeler/railroader using its
+gh-pages branch:
+
+~~~~
+  git clone https://github.com/david-a-wheeler/railroader.git
+  mv railroader '_deploy'
+  cd _deploy
+  git checkout gh-pages
+~~~~
+
+## Making changes
+
+In general edit the information in directory `content/`.
+
+You can view things by running `make` which will start up `hugo`,
+then use a web browser to view `http://localhost:1313/`
+If you edit something, hugo will automatically rerender, so just
+refresh the page on your web browser.
+
+There are lots of pages in the repo that are not currently being
+displayed on the website.
+Fixes welcome.
+
+*Beware*: Image files must *not* contain a dash
+[due to a bug in GitHub](https://github.com/OregonDigital/oregondigital/issues/583).
+It took me a while to figure out that problem.
+
+Run `make generate` to generate the static pages.
+
+When you are happy, `git commit -asv` to commit them all.
+
+Run `make push` to push the pages to the real site (if you have the rights).
+
+## Older version
+
+### Older version - install
+
 The older site is built using (a very old version of) Octopress, which is a layer on top of Jekyll.  We are seriously considering switching to Hugo, but the goal was to just get started.  First you need to install things so that you can make changes.
 
 Changes to the site content should be made in `source/`. Markdown is preferred.
@@ -37,7 +75,7 @@ gh-pages branch:
   git checkout gh-pages
 ~~~~
 
-## Making changes to the site
+### Older version - Making changes to the site
 
 Edit pages within /source
 (except for `source/railroader/docs/warning_types`).
