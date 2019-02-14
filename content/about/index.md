@@ -1,4 +1,4 @@
-Railroader is security static analysis tool for
+Railroader is a security static analysis tool for
 applications written using Ruby on Rails.
 
 Railroader will examine your program to look for potential
