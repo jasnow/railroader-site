@@ -14,7 +14,6 @@ You can use it for any purpose, including commercial purposes, and
 
 Railroader is a fork of the Brakeman tool, which was once OSS but is no longer. If you want Brakeman, go to the
 [Brakeman website](https://brakemanscanner.org/) instead.
-We presume that the term "Brakeman" is trademarked by Synopsys, Inc.
 Railroader is not Brakeman, though they share a common history.
 If you find something in our documentation that incorrectly
 implies that Railroader is Brakeman, please let us know so we can fix it.
