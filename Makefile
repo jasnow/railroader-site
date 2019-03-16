@@ -1,5 +1,5 @@
 demo:
-	HUGO_ENV=production hugo server -D
+	HUGO_ENV=production hugo server -D --disableFastRender
 
 generate:
 	HUGO_ENV=production hugo

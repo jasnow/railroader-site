@@ -11,5 +11,5 @@ in applications that use Ruby on Rails.
 It's easy to [install](/install) and [use](/use).
 It is open source software (OSS) using the MIT license; we
 [love bug reports and contributions](https://github.com/david-a-wheeler/railroader)!
-You can [learn more about Railroader](/about).
-
+More [documentation](/docs) is available.
+You can [learn the basics about Railroader](/about).
