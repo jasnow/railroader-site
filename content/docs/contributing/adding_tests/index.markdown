@@ -39,7 +39,7 @@ However, if a test fails like this:
 
 Then the vulnerability probably was detected. Again, verify by using Railroader directly.
 
-If the vulnerability was not detected, please [file an issue](https://github.com/presidentbeef/railroader/issues) for it!
+If the vulnerability was not detected, please [file an issue](https://github.com/david-a-wheeler/railroader/issues) for it!
 
 ### Adding a Known Vulnerability
 

@@ -40,4 +40,4 @@ New checks can be added simply by writing a new check and placing it in that dir
 
 ### Reporting Success
 
-If you are happily using Railroader, consider sending a tweet to [@Railroader](http://twitter.com/#!/railroader).
+If you are happily using Railroader, consider sending a tweet to [@RailroaderTool](http://twitter.com/#!/RailroaderTool).

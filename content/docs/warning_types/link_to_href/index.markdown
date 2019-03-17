@@ -13,7 +13,7 @@ Railroader will warn on if user values are used to provide the HREF value in `li
 
 The `--url-safe-methods` option can be used to specify methods which make URLs safe. 
 
-See [here](https://github.com/presidentbeef/railroader/pull/45) for more details.
+See [here](https://github.com/david-a-wheeler/railroader/pull/45) for more details.
 
 ---
 Back to [Warning Types](/docs/warning_types)

@@ -55,7 +55,7 @@ Dynamic vulnerability scanners which run against a live website are able to test
 
 ### Isn't Omniscient
 
-Railroader cannot understand everything which is happening in the code. Sometimes it just makes reasonable assumptions. It may miss things. It may misinterpret things. But it tries its best. Remember, if you run across something strange, feel free to file an [issue](https://github.com/presidentbeef/railroader/issues) for it.
+Railroader cannot understand everything which is happening in the code. Sometimes it just makes reasonable assumptions. It may miss things. It may misinterpret things. But it tries its best. Remember, if you run across something strange, feel free to file an [issue](https://github.com/david-a-wheeler/railroader/issues) for it.
 
 ## Suggested Use
 

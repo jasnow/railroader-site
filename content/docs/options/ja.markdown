@@ -7,7 +7,7 @@ sharing: false
 footer: true
 ---
 
-Railroaderのオプションドキュメント（[OPTIONS.md](https://github.com/presidentbeef/railroader/blob/master/OPTIONS.md)）を翻訳しました。
+Railroaderのオプションドキュメント（[OPTIONS.md](https://github.com/david-a-wheeler/railroader/blob/master/OPTIONS.md)）を翻訳しました。
 
 共同翻訳者は@jnchitoです。
 
@@ -236,7 +236,7 @@ railroader --github-repo USER/REPO[/PATH][@REF]
 次はその使用例です。
 
 ```
-railroader --github-repo presidentbeef/inject-some-sql
+railroader --github-repo david-a-wheeler/inject-some-sql
 ```
 
 前回実行したスキャン結果と今回の結果を比較したい場合は、JSON出力と次のオプションを使ってください。

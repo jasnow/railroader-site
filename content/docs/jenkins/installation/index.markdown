@@ -29,7 +29,7 @@ Check the box next to "Static Analysis Utilities" and click "Install".
 
 ### Download Railroader Plugin
 
-You can download the Railroader plugin [here](https://github.com/downloads/presidentbeef/railroader-jenkins-plugin/railroader.hpi) or from the "Downloads" link [here](https://github.com/presidentbeef/railroader-jenkins-plugin).
+You can download the Railroader plugin [here](https://github.com/downloads/david-a-wheeler/railroader-jenkins-plugin/railroader.hpi) or from the "Downloads" link [here](https://github.com/david-a-wheeler/railroader-jenkins-plugin).
 
 ### Install the Railroader Plugin
 

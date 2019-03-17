@@ -170,7 +170,7 @@ To output Markdown with nice links to files on Github, use
 
 For example,
 
-    railroader --github-repo presidentbeef/inject-some-sql
+    railroader --github-repo david-a-wheeler/inject-some-sql
 
 To compare results of a scan with a previous scan, use the JSON output option and then:
 

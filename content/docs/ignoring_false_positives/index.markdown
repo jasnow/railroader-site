@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-False positives (warnings about potential vulnerabilities which are not actual vulnerabilities) are present in any security tool. Before ignoring a false positive, be certain it is actually a false positive and also consider [reporting it](https://github.com/presidentbeef/railroader/wiki/How-to-Report-a-Railroader-Issue#false-positivesfalse-negatives) in case changes can be made to Railroader to prevent the false positive in the future.
+False positives (warnings about potential vulnerabilities which are not actual vulnerabilities) are present in any security tool. Before ignoring a false positive, be certain it is actually a false positive and also consider [reporting it](https://github.com/david-a-wheeler/railroader/wiki/How-to-Report-a-Railroader-Issue#false-positivesfalse-negatives) in case changes can be made to Railroader to prevent the false positive in the future.
 
 The ignore configuration is a JSON file containing a list of warnings. This is essentially the same as the JSON report, except the warnings can also have a `note` field.
 

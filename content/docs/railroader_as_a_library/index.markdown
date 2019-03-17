@@ -21,7 +21,7 @@ Here is a simple example:
 
 This runs Railroader against the Rails application in `my/app` and prints out the report. This is essentially equivalent to running Railroader with no options.
 
-`Railroader.run` returns a `Tracker` object ([doc](http://rubydoc.info/github/presidentbeef/railroader/master/frames)) which contains all the information from the scan. `Tracker#checks` ([doc](http://rubydoc.info/github/presidentbeef/railroader/master/frames)) holds the results from running the checks.
+`Railroader.run` returns a `Tracker` object ([doc](http://rubydoc.info/github/david-a-wheeler/railroader/master/frames)) which contains all the information from the scan. `Tracker#checks` ([doc](http://rubydoc.info/github/david-a-wheeler/railroader/master/frames)) holds the results from running the checks.
 
 ### Using Options
 
