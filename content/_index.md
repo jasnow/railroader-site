@@ -12,4 +12,5 @@ It's easy to [install](/install) and [use](/use).
 It is open source software (OSS) using the MIT license; we
 [love bug reports and contributions](https://github.com/david-a-wheeler/railroader)!
 More [documentation](/docs) is available.
-You can [learn the basics about Railroader](/about).
+You can [learn the basics about Railroader](/about), or learn about
+[users of Railroader](/users).
