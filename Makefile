@@ -1,3 +1,6 @@
+# Railroader site commands.
+# Edit content by editing the "content/" directory and config.toml.
+
 demo:
 	HUGO_ENV=production hugo server -D --disableFastRender
 

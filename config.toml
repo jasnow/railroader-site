@@ -23,6 +23,11 @@ enableRobotsTXT = true
     url = "/use/"
 
   [[menu.main]]
+    identifier = "Users"
+    name = "Users"
+    url = "/users/"
+
+  [[menu.main]]
     identifier = "Documentation"
     name = "Documentation"
     url = "/docs/"
