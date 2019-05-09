@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
 gem 'rake'
-gem 'rack'
 gem 'jekyll'
 gem 'rdiscount'
 gem 'pygments.rb'
