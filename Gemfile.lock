@@ -25,7 +25,7 @@ GEM
     eventmachine (1.2.7)
     ffi (1.10.0)
     forwardable-extended (2.6.0)
-    haml (5.0.4)
+    haml (5.1.0)
       temple (>= 0.8.0)
       tilt
     http_parser.rb (0.6.0)
