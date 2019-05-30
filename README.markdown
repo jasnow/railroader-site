@@ -60,8 +60,7 @@ Changes to the site content should be made in `source/`. Markdown is preferred.
 
 To install:
 
-* Use Ruby 2.6.2.  If you use rbenv: rbenv install 2.6.2
-* To install a bundler that works on this old Ruby: gem install --version 1.17.2 bundler
+* Use Ruby 2.7.0-preview1.  If you use rbenv: rbenv install 2.7.0-preview1
 * `bundle install` for dependencies
 
 You also need to set up the "\_deploy" subdirectory so that it is a
