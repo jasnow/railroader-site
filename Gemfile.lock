@@ -78,7 +78,7 @@ GEM
     sassc (2.2.0)
       ffi (~> 1.9)
     stringex (2.8.5)
-    temple (0.8.1)
+    temple (0.8.2)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     tilt (2.0.9)
