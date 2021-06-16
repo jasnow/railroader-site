@@ -23,7 +23,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
-    ffi (1.15.1)
+    ffi (1.15.3)
     forwardable-extended (2.6.0)
     haml (5.2.1)
       temple (>= 0.8.0)
